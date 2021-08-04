@@ -1,9 +1,12 @@
 class Solution:
 
-    def reverse(self, x: int) -> int:
+    def __init__(self, x: int):
+        self.x = x
 
-        if x < 0:
-            x1 = x * (-1)
+    def reverse(self) -> int:
+
+        if self.x < 0:
+            x1 = self.x * (-1)
             x2 = str(x1)
             x3 = x2[::-1]
             x4 = int(x3) * (-1)
@@ -14,8 +17,8 @@ class Solution:
 
             else:
                 return 0
-        elif x > 0:
-            x2 = str(x)
+        elif self.x > 0:
+            x2 = str(self.x)
             x3 = x2[::-1]
             x4 = int(x3)
 
@@ -27,6 +30,6 @@ class Solution:
                 return 0
 
 
-obj = Solution()
+obj = Solution(int(input("number:")))
 # n = int(input("number:"))
-obj.reverse(int(input("number:")))
+obj.reverse()
